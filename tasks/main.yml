@@ -1,0 +1,9 @@
+---
+# tasks file for mapr-fileserver
+
+- name: install mapr-fileserver
+  yum: name='{{item}}' state=present
+  with_items:
+    - mapr-fileserver
+  when: ansible_distribution in ('CentOS', 'RedHat', 'Amazon')
+  environment: proxy_env

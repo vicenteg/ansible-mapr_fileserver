@@ -1,0 +1,5 @@
+---
+# defaults file for mapr-fileserver
+# mapr_disks: [ ]
+
+proxy_env: { }
