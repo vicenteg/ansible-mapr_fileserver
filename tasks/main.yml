@@ -2,8 +2,8 @@
 # tasks file for mapr-fileserver
 
 - name: install mapr-fileserver
-  sudo: yes
-  sudo_user: root
+  become: yes
+  become_user: root
   yum: name='{{item}}' state=present
   with_items:
     - mapr-fileserver
